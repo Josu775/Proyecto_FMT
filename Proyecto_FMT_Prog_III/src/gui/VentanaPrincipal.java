@@ -35,7 +35,8 @@ public class VentanaPrincipal extends JFrame{
         
         add(panel, BorderLayout.CENTER);
         
-        setVisible(true);
+        
+        setVisible(false);
         
 	}
 	
