@@ -35,8 +35,6 @@ public class VentanaPrincipal extends JFrame{
         
         add(panel, BorderLayout.CENTER);
         
-        opcionesBoton.addActionListener(e -> abrirOpciones());
-        
         setVisible(true);
         
 	}
