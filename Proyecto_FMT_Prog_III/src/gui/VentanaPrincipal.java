@@ -36,10 +36,13 @@ public class VentanaPrincipal extends JFrame{
         add(panel, BorderLayout.CENTER);
         
         
-        setVisible(false);
+        setVisible(true);
         
 	}
 	
+	public static void main(String[] args) {
+		new VentanaPrincipal();
+	}
 	
 	
 	public void aplicarConfiguracion(int ancho, int alto, boolean pantallaCompleta) {
