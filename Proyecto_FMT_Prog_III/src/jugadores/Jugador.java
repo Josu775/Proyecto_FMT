@@ -1,66 +1,58 @@
 package jugadores;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class Jugador {
-    private String nombre;
-    private int edad;
-    private String posicion;
+    private String nombreCompleto;
+    private String nacionalidad;
     private Habilidad habilidad;
+    private String posicion;
 
-
-    public Jugador(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
+    public Jugador(Generador_Nombres nombreGenerator) {
+        // Obtener un nombre aleatorio del archivo
+        String nombreYNacionalidad = nombreGenerator.obtenerNombreAleatorio();
+        String[] partes = nombreYNacionalidad.split(", ");
+        this.nombreCompleto = partes[0];
+        this.nacionalidad = partes[1];
+        
+        // Asignar posición aleatoria
         this.posicion = asignarPosicionAleatoria();
-        this.habilidad = new Habilidad(posicion);
+        this.habilidad = new Habilidad(this.posicion);  // Crear habilidad basada en la posición
     }
-    
+
+    // Método para asignar una posición aleatoria
     private String asignarPosicionAleatoria() {
-        String[] posiciones = {"delantero", "centrocampista", "defensor", "portero"};
+        String[] posiciones = {"Delantero", "Centrocampista", "Defensor", "Portero"};
         Random random = new Random();
-        int indiceAleatorio = random.nextInt(posiciones.length); 
-        return posiciones[indiceAleatorio]; 
+        return posiciones[random.nextInt(posiciones.length)];
     }
-    
-    public void mejorarAtributos() {
-        Random random = new Random();
-        int mejora = (edad < 30) ? random.nextInt(10) + 1 : random.nextInt(5) + 1; 
-        
 
-        habilidad.getAtributosFisicos().forEach((key, value) -> 
-            habilidad.getAtributosFisicos().put(key, Math.min(value + mejora, 100))); 
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
 
-        habilidad.getAtributosMentales().forEach((key, value) -> 
-            habilidad.getAtributosMentales().put(key, Math.min(value + mejora, 100))); 
-        
-        habilidad.getAtributosTecnicos().forEach((key, value) -> 
-            habilidad.getAtributosTecnicos().put(key, Math.min(value + mejora, 100)));
-        
-        habilidad.getAtributosPortero().forEach((key, value) -> 
-            habilidad.getAtributosPortero().put(key, Math.min(value + mejora, 100)));
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public String getPosicion() {
+        return posicion;
     }
 
     public void mostrarInformacion() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Edad: " + edad);
+        System.out.println("Nombre: " + nombreCompleto);
+        System.out.println("Nacionalidad: " + nacionalidad);
         System.out.println("Posición: " + posicion);
-        habilidad.mostrarAtributos();
+        habilidad.mostrarAtributos();  // Mostrar los atributos del jugador
     }
 
     public static void main(String[] args) {
+        // Crear un generador de nombres a partir del archivo
+    	Generador_Nombres nombreGenerador = new Generador_Nombres("recursos/Nombres_jugadores.txt");
 
-        Jugador delantero = new Jugador("Juan", 25);
-        Jugador centrocampista = new Jugador("Luis", 28);
-        Jugador defensor = new Jugador("Carlos", 32);
-        Jugador portero = new Jugador("Miguel", 30);
-
-        delantero.mostrarInformacion();
-        System.out.println();
-        centrocampista.mostrarInformacion();
-        System.out.println();
-        defensor.mostrarInformacion();
-        System.out.println();
-        portero.mostrarInformacion();
+        // Crear un jugador con nombre aleatorio
+        Jugador jugador = new Jugador(nombreGenerador);
+        jugador.mostrarInformacion();
     }
 }
