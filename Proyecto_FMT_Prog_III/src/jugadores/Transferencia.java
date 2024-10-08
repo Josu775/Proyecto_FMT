@@ -66,6 +66,10 @@ public class Transferencia {
             baseValor *= 2.0;
         }
 
+        if (baseValor < VALOR_MEDIO) {
+            baseValor *= (0.5 + Math.random() * 0.5);
+        }
+
         if (sumaAtributos == (atributosFisicos.size() + atributosMentales.size() + atributosTecnicos.size()) * 100) {
             baseValor = VALOR_MAXIMO;
         }
