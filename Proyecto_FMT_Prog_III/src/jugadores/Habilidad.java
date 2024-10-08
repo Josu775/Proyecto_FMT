@@ -24,8 +24,8 @@ public class Habilidad {
     
     private void inicializarAtributos(String posicion) {
         Random random = new Random();
-        int min = 1;
-        int max = 100;
+        int min = 20;
+        int max = 60;
         
 
         atributosFisicos.put("Resistencia", generarValorAleatorio(min, max, random));
