@@ -17,7 +17,7 @@ public class VentanaPrincipal extends JFrame{
 	private boolean PantallaCompleta = false;
     private GraphicsDevice device;
 	
-	public VentanaPrincipal() {
+	public VentanaPrincipal() {sñ,cs
 		setTitle("Football Manager Team");
 		setSize(1280, 720);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
