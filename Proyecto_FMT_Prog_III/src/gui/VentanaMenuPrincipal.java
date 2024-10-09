@@ -32,7 +32,7 @@ public class VentanaMenuPrincipal extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         panel.add(botonopciones);
-        panel.add(botonsalir);
+        panel.add(botonsalir);asds
 
         add(panel);
         setVisible(true);
