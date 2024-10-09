@@ -1,0 +1,96 @@
+Real Madrid, LaLiga
+FC Barcelona, LaLiga
+Atlético de Madrid, LaLiga
+Sevilla FC, LaLiga
+Real Sociedad, LaLiga
+Real Betis, LaLiga
+Athletic Club, LaLiga
+Valencia CF, LaLiga
+Villarreal CF, LaLiga
+Celta de Vigo, LaLiga
+Espanyol, LaLiga
+Granada CF, LaLiga
+Getafe CF, LaLiga
+Osasuna, LaLiga
+Alavés, LaLiga
+Elche CF, LaLiga
+Mallorca, LaLiga
+Rayo Vallecano, LaLiga
+Cádiz CF, LaLiga
+Almería, LaLiga
+Manchester City, Premier League
+Liverpool, Premier League
+Chelsea, Premier League
+Arsenal, Premier League
+Manchester United, Premier League
+Tottenham Hotspur, Premier League
+Newcastle United, Premier League
+Aston Villa, Premier League
+Brighton & Hove Albion, Premier League
+Brentford, Premier League
+Wolverhampton Wanderers, Premier League
+Crystal Palace, Premier League
+Fulham, Premier League
+Southampton, Premier League
+Nottingham Forest, Premier League
+Bournemouth, Premier League
+West Ham United, Premier League
+Sheffield United, Premier League
+Luton Town, Premier League
+Sheffield United, Premier League
+Juventus, Serie A
+AC Milan, Serie A
+Inter de Milán, Serie A
+AS Roma, Serie A
+Napoli, Serie A
+Lazio, Serie A
+Fiorentina, Serie A
+Atalanta, Serie A
+Torino, Serie A
+Bologna, Serie A
+Sampdoria, Serie A
+Cagliari, Serie A
+Genoa, Serie A
+Salernitana, Serie A
+Sassuolo, Serie A
+Verona, Serie A
+Empoli, Serie A
+Udinese, Serie A
+Monza, Serie A
+Spezia, Serie A
+Paris Saint-Germain, Ligue 1
+Olympique de Marseille, Ligue 1
+AS Monaco, Ligue 1
+Lille OSC, Ligue 1
+Olympique Lyonnais, Ligue 1
+RC Lens, Ligue 1
+Stade Rennais, Ligue 1
+OGC Niza, Ligue 1
+FC Nantes, Ligue 1
+Montpellier HSC, Ligue 1
+Stade de Reims, Ligue 1
+Toulouse FC, Ligue 1
+Angers SCO, Ligue 1
+Brest, Ligue 1
+Clermont Foot, Ligue 1
+Strasbourg, Ligue 1
+Ajaccio, Ligue 1
+Nantes, Ligue 1
+Bayern Munich, Bundesliga
+Borussia Dortmund, Bundesliga
+RB Leipzig, Bundesliga
+Bayer 04 Leverkusen, Bundesliga
+SC Freiburg, Bundesliga
+Union Berlin, Bundesliga
+VfL Wolfsburgo, Bundesliga
+Borussia Mönchengladbach, Bundesliga
+Eintracht Frankfurt, Bundesliga
+Mainz 05, Bundesliga
+VfB Stuttgart, Bundesliga
+Hertha BSC, Bundesliga
+Hoffenheim, Bundesliga
+FC Augsburg, Bundesliga
+1. FC Köln, Bundesliga
+VfL Bochum, Bundesliga
+Greuther Fürth, Bundesliga
+FC Augsburg, Bundesliga
