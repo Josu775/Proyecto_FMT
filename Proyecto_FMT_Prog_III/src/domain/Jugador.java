@@ -1,4 +1,4 @@
-package jugadores;
+package domain;
 
 import java.io.IOException;
 import java.util.Random;
@@ -10,11 +10,12 @@ public class Jugador {
     private String posicion;
     private int edad;
     private boolean esChicoMaravilla;
+    private Sueldo sueldo; // Sueldo asociado al jugador
 
-    private static final int EDAD_MIN = 16;  
-    private static final int EDAD_MAX = 42;  
-    private static final int EDAD_MAX_CHICO_MARAVILLA = 21;  
-    private static final double PROBABILIDAD_CHICO_MARAVILLA = 0.05;  
+    private static final int EDAD_MIN = 16;
+    private static final int EDAD_MAX = 42;
+    private static final int EDAD_MAX_CHICO_MARAVILLA = 21;
+    private static final double PROBABILIDAD_CHICO_MARAVILLA = 0.05;
 
     public Jugador(Generador_Nombres nombreGenerator) throws IOException {
         String nombreYNacionalidad = nombreGenerator.obtenerNombreAleatorio();
@@ -26,6 +27,9 @@ public class Jugador {
         this.esChicoMaravilla = determinarSiEsChicoMaravilla();
         this.habilidad = new Habilidad(this.posicion);
         ajustarHabilidadesSegunEdad();
+
+        // Crear el sueldo del jugador basado en sus habilidades y edad
+        this.sueldo = new Sueldo(this); // Instancia de la clase Sueldo con este jugador
     }
 
     private int generarEdadAleatoria() {
@@ -44,7 +48,7 @@ public class Jugador {
     private void ajustarHabilidadesSegunEdad() {
         Random random = new Random();
         int ajusteEdad = calcularAjustePorEdad();
-        
+
         if (esChicoMaravilla) {
             ajustarHabilidadesChicoMaravilla();
         } else {
@@ -59,13 +63,13 @@ public class Jugador {
 
     private int calcularAjustePorEdad() {
         if (edad <= 20) {
-            return -20;  
+            return -20;
         } else if (edad <= 25) {
-            return -10;  
+            return -10;
         } else if (edad <= 30) {
-            return 10;   
+            return 10;
         } else {
-            return 20;   
+            return 20;
         }
     }
 
@@ -109,6 +113,10 @@ public class Jugador {
         return habilidad;
     }
 
+    public Sueldo getSueldo() {
+        return sueldo;
+    }
+
     public void mostrarInformacion() {
         System.out.println("Nombre: " + nombreCompleto);
         System.out.println("Nacionalidad: " + nacionalidad);
@@ -117,16 +125,23 @@ public class Jugador {
         if (esChicoMaravilla) {
             System.out.println("¡Es un chico maravilla!");
         }
-        habilidad.mostrarAtributos();  
+
+        habilidad.mostrarAtributos(); // Muestra los atributos de habilidad
+        double mediaGeneral = habilidad.getMediaGeneral(); // Obtener la media general
+        System.out.println("Media General: " + mediaGeneral); // Mostrar media general
+
+        // Mostrar el sueldo calculado usando la clase Sueldo
+        sueldo.mostrarSueldo(); // Mostramos el sueldo del jugador
+
         Transferencia transferencia = new Transferencia(this);
         transferencia.mostrarInformacionTransferencia();
     }
 
     public static void main(String[] args) {
         try {
-            Generador_Nombres nombreGenerador = new Generador_Nombres("recursos/Nombres_jugadores.txt");
+            Generador_Nombres nombreGenerador = new Generador_Nombres("recursos/Archivos_CargarDatos/Nombres_jugadores.txt");
             Jugador jugador = new Jugador(nombreGenerador);
-            jugador.mostrarInformacion();
+            jugador.mostrarInformacion(); // Muestra la información del jugador creado
         } catch (IOException e) {
             System.err.println("Error al leer el archivo de nombres: " + e.getMessage());
         }

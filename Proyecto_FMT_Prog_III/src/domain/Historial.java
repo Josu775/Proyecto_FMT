@@ -1,4 +1,4 @@
-package jugadores;
+package domain;
 
 public class Historial {
 

@@ -1,4 +1,4 @@
-package competiciones;
+package domain;
 
 public class Champions {
 
