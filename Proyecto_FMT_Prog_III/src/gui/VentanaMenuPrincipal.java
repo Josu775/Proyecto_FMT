@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class VentanaMenuPrincipal extends JFrame {
-
     private boolean pantallaCompleta = false;  // Estado de pantalla completa
     private GraphicsDevice dispositivo;
 
@@ -134,10 +133,14 @@ public class VentanaMenuPrincipal extends JFrame {
         
         // Cargar los equipos y añadir botones para cada uno
         ArrayList<String> equipos = cargarEquipos(liga);
-        for (String equipo : equipos) {
-            JButton equipoButton = new JButton(equipo);
-            panelEquipos.add(equipoButton);
-            panelEquipos.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio de 10 píxeles entre botones
+        if (equipos.isEmpty()) {
+            panelEquipos.add(new JLabel("No hay equipos disponibles para esta liga."));
+        } else {
+            for (String equipo : equipos) {
+                JButton equipoButton = new JButton(equipo);
+                panelEquipos.add(equipoButton);
+                panelEquipos.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio de 10 píxeles entre botones
+            }
         }
 
         panelEquipos.revalidate(); // Actualizar el panel de equipos
@@ -199,7 +202,7 @@ public class VentanaMenuPrincipal extends JFrame {
     public void desactivarPantallaCompleta() {
         dispositivo.setFullScreenWindow(null);  // Salir del modo pantalla completa
         this.dispose();
-        this.setUndecorated(false);  // Restaurar borde0s
+        this.setUndecorated(false);  // Restaurar bordes
         this.setSize(800, 600);  // Restaurar el tamaño
         this.setVisible(true);
         pantallaCompleta = false;
@@ -212,6 +215,11 @@ public class VentanaMenuPrincipal extends JFrame {
 
     public void setPantallaCompleta(boolean pantallaCompleta) {
         this.pantallaCompleta = pantallaCompleta;
+    }
+
+    // Método para obtener la resolución actual
+    public String getResolucion() {
+        return getWidth() + "x" + getHeight();
     }
 
     public static void main(String[] args) {

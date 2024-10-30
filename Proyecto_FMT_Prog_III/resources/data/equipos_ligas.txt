@@ -1,96 +1,95 @@
-Real Madrid, LaLiga
-FC Barcelona, LaLiga
-Atlético de Madrid, LaLiga
-Sevilla FC, LaLiga
-Real Sociedad, LaLiga
-Real Betis, LaLiga
-Athletic Club, LaLiga
-Valencia CF, LaLiga
-Villarreal CF, LaLiga
-Celta de Vigo, LaLiga
-Espanyol, LaLiga
-Granada CF, LaLiga
-Getafe CF, LaLiga
-Osasuna, LaLiga
-Alavés, LaLiga
-Elche CF, LaLiga
-Mallorca, LaLiga
-Rayo Vallecano, LaLiga
-Cádiz CF, LaLiga
-Almería, LaLiga
-Manchester City, Premier League
-Liverpool, Premier League
-Chelsea, Premier League
-Arsenal, Premier League
-Manchester United, Premier League
-Tottenham Hotspur, Premier League
-Newcastle United, Premier League
-Aston Villa, Premier League
-Brighton & Hove Albion, Premier League
-Brentford, Premier League
-Wolverhampton Wanderers, Premier League
-Crystal Palace, Premier League
-Fulham, Premier League
-Southampton, Premier League
-Nottingham Forest, Premier League
-Bournemouth, Premier League
-West Ham United, Premier League
-Sheffield United, Premier League
-Luton Town, Premier League
-Sheffield United, Premier League
-Juventus, Serie A
-AC Milan, Serie A
-Inter de Milán, Serie A
-AS Roma, Serie A
-Napoli, Serie A
-Lazio, Serie A
-Fiorentina, Serie A
-Atalanta, Serie A
-Torino, Serie A
-Bologna, Serie A
-Sampdoria, Serie A
-Cagliari, Serie A
-Genoa, Serie A
-Salernitana, Serie A
-Sassuolo, Serie A
-Verona, Serie A
-Empoli, Serie A
-Udinese, Serie A
-Monza, Serie A
-Spezia, Serie A
-Paris Saint-Germain, Ligue 1
-Olympique de Marseille, Ligue 1
-AS Monaco, Ligue 1
-Lille OSC, Ligue 1
-Olympique Lyonnais, Ligue 1
-RC Lens, Ligue 1
-Stade Rennais, Ligue 1
-OGC Niza, Ligue 1
-FC Nantes, Ligue 1
-Montpellier HSC, Ligue 1
-Stade de Reims, Ligue 1
-Toulouse FC, Ligue 1
-Angers SCO, Ligue 1
-Brest, Ligue 1
-Clermont Foot, Ligue 1
-Strasbourg, Ligue 1
-Ajaccio, Ligue 1
-Nantes, Ligue 1
-Bayern Munich, Bundesliga
-Borussia Dortmund, Bundesliga
-RB Leipzig, Bundesliga
-Bayer 04 Leverkusen, Bundesliga
-SC Freiburg, Bundesliga
-Union Berlin, Bundesliga
-VfL Wolfsburgo, Bundesliga
-Borussia Mönchengladbach, Bundesliga
-Eintracht Frankfurt, Bundesliga
-Mainz 05, Bundesliga
-VfB Stuttgart, Bundesliga
-Hertha BSC, Bundesliga
-Hoffenheim, Bundesliga
-FC Augsburg, Bundesliga
-1. FC Köln, Bundesliga
-VfL Bochum, Bundesliga
-Greuther Fürth, Bundesliga
-FC Augsburg, Bundesliga
+Real Madrid, LaLiga, resources/logos/real_madrid.png
+FC Barcelona, LaLiga, resources/logos/fc_barcelona.png
+Atlético de Madrid, LaLiga, resources/logos/atletico_madrid.png
+Sevilla FC, LaLiga, resources/logos/sevilla_fc.png
+Real Sociedad, LaLiga, resources/logos/real_sociedad.png
+Real Betis, LaLiga, resources/logos/real_betis.png
+Athletic Club, LaLiga, resources/logos/athletic_club.png
+Valencia CF, LaLiga, resources/logos/valencia_cf.png
+Villarreal CF, LaLiga, resources/logos/villarreal_cf.png
+Celta de Vigo, LaLiga, resources/logos/celta_de_vigo.png
+Espanyol, LaLiga, resources/logos/espanyol.png
+Granada CF, LaLiga, resources/logos/granada_cf.png
+Getafe CF, LaLiga, resources/logos/getafe_cf.png
+Osasuna, LaLiga, resources/logos/osasuna.png
+Alavés, LaLiga, resources/logos/alaves.png
+Elche CF, LaLiga, resources/logos/elche_cf.png
+Mallorca, LaLiga, resources/logos/mallorca.png
+Rayo Vallecano, LaLiga, resources/logos/rayo_vallecano.png
+Cádiz CF, LaLiga, resources/logos/cadiz_cf.png
+Almería, LaLiga, resources/logos/almeria.png
+Real Valladolid, LaLiga, resources/logos/real_valladolid.png
+Manchester City, Premier League, resources/logos/manchester_city.png
+Liverpool, Premier League, resources/logos/liverpool.png
+Chelsea, Premier League, resources/logos/chelsea.png
+Arsenal, Premier League, resources/logos/arsenal.png
+Manchester United, Premier League, resources/logos/manchester_united.png
+Tottenham Hotspur, Premier League, resources/logos/tottenham_hotspur.png
+Newcastle United, Premier League, resources/logos/newcastle_united.png
+Aston Villa, Premier League, resources/logos/aston_villa.png
+Brighton & Hove Albion, Premier League, resources/logos/brighton_hove_albion.png
+Brentford, Premier League, resources/logos/brentford.png
+Wolverhampton Wanderers, Premier League, resources/logos/wolverhampton.png
+Crystal Palace, Premier League, resources/logos/crystal_palace.png
+Fulham, Premier League, resources/logos/fulham.png
+Southampton, Premier League, resources/logos/southampton.png
+Nottingham Forest, Premier League, resources/logos/nottingham_forest.png
+Bournemouth, Premier League, resources/logos/bournemouth.png
+West Ham United, Premier League, resources/logos/west_ham_united.png
+Sheffield United, Premier League, resources/logos/sheffield_united.png
+Luton Town, Premier League, resources/logos/luton_town.png
+Juventus, Serie A, resources/logos/juventus.png
+AC Milan, Serie A, resources/logos/ac_milan.png
+Inter de Milán, Serie A, resources/logos/inter_milan.png
+AS Roma, Serie A, resources/logos/as_roma.png
+Napoli, Serie A, resources/logos/napoli.png
+Lazio, Serie A, resources/logos/lazio.png
+Fiorentina, Serie A, resources/logos/fiorentina.png
+Atalanta, Serie A, resources/logos/atalanta.png
+Torino, Serie A, resources/logos/torino.png
+Bologna, Serie A, resources/logos/bologna.png
+Sampdoria, Serie A, resources/logos/sampdoria.png
+Cagliari, Serie A, resources/logos/cagliari.png
+Genoa, Serie A, resources/logos/genoa.png
+Salernitana, Serie A, resources/logos/salernitana.png
+Sassuolo, Serie A, resources/logos/sassuolo.png
+Verona, Serie A, resources/logos/verona.png
+Empoli, Serie A, resources/logos/empoli.png
+Udinese, Serie A, resources/logos/udinese.png
+Monza, Serie A, resources/logos/monza.png
+Spezia, Serie A, resources/logos/spezia.png
+Paris Saint-Germain, Ligue 1, resources/logos/paris_saint_germain.png
+Olympique de Marseille, Ligue 1, resources/logos/olympique_marseille.png
+AS Monaco, Ligue 1, resources/logos/as_monaco.png
+Lille OSC, Ligue 1, resources/logos/lille.png
+Olympique Lyonnais, Ligue 1, resources/logos/olympique_lyonnais.png
+RC Lens, Ligue 1, resources/logos/rc_lens.png
+Stade Rennais, Ligue 1, resources/logos/stade_rennais.png
+OGC Niza, Ligue 1, resources/logos/ogc_niza.png
+FC Nantes, Ligue 1, resources/logos/fc_nantes.png
+Montpellier HSC, Ligue 1, resources/logos/montpellier.png
+Stade de Reims, Ligue 1, resources/logos/stade_reims.png
+Toulouse FC, Ligue 1, resources/logos/toulouse.png
+Angers SCO, Ligue 1, resources/logos/angers.png
+Brest, Ligue 1, resources/logos/brest.png
+Clermont Foot, Ligue 1, resources/logos/clermont.png
+Strasbourg, Ligue 1, resources/logos/strasbourg.png
+Ajaccio, Ligue 1, resources/logos/ajaccio.png
+Nantes, Ligue 1, resources/logos/nantes.png
+Bayern Munich, Bundesliga, resources/logos/bayern_munich.png
+Borussia Dortmund, Bundesliga, resources/logos/borussia_dortmund.png
+RB Leipzig, Bundesliga, resources/logos/rb_leipzig.png
+Bayer 04 Leverkusen, Bundesliga, resources/logos/bayer_leverkusen.png
+SC Freiburg, Bundesliga, resources/logos/sc_freiburg.png
+Union Berlin, Bundesliga, resources/logos/union_berlin.png
+VfL Wolfsburgo, Bundesliga, resources/logos/vfl_wolfsburgo.png
+Borussia Mönchengladbach, Bundesliga, resources/logos/borussia_monchengladbach.png
+Eintracht Frankfurt, Bundesliga, resources/logos/eintracht_frankfurt.png
+Mainz 05, Bundesliga, resources/logos/mainz_05.png
+VfB Stuttgart, Bundesliga, resources/logos/vfb_stuttgart.png
+Hertha BSC, Bundesliga, resources/logos/hertha_bsc.png
+Hoffenheim, Bundesliga, resources/logos/hoffenheim.png
+FC Augsburg, Bundesliga, resources/logos/fc_augsburg.png
+1. FC Köln, Bundesliga, resources/logos/fc_koln.png
+VfL Bochum, Bundesliga, resources/logos/vfl_bochen.png
+Greuther Fürth, Bundesliga, resources/logos/greuther_furth.png
