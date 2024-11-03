@@ -125,45 +125,80 @@ public class VentanaMenuPrincipal extends JFrame {
     private void mostrarEquipos(String liga) {
         // Limpiar el panel de equipos
         panelEquipos.removeAll();
+        panelEquipos.setLayout(new BorderLayout());
 
-        // Crear y agregar el botón de regresar
+        // Crear un panel para los botones con BoxLayout
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+
+        // Botón de regresar
         JButton regresarButton = new JButton("Regresar a Ligas");
+        regresarButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        regresarButton.setMaximumSize(new Dimension(200, 50));
         regresarButton.addActionListener(e -> mostrarPanelLigas());
-        panelEquipos.add(regresarButton);
-        
-        // Cargar los equipos y añadir botones para cada uno
+        buttonPanel.add(regresarButton);
+        buttonPanel.add(Box.createRigidArea(new Dimension(0, 20)));
+
+        // Cargar y mostrar equipos
         ArrayList<String> equipos = cargarEquipos(liga);
+        
         if (equipos.isEmpty()) {
-            panelEquipos.add(new JLabel("No hay equipos disponibles para esta liga."));
+            JLabel noEquiposLabel = new JLabel("No hay equipos disponibles para " + liga);
+            noEquiposLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+            buttonPanel.add(noEquiposLabel);
         } else {
             for (String equipo : equipos) {
                 JButton equipoButton = new JButton(equipo);
-                panelEquipos.add(equipoButton);
-                panelEquipos.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio de 10 píxeles entre botones
+                equipoButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+                equipoButton.setMaximumSize(new Dimension(200, 50));
+                equipoButton.addActionListener(e -> {
+                    JOptionPane.showMessageDialog(this, "Seleccionaste: " + equipo);
+                });
+                buttonPanel.add(equipoButton);
+                buttonPanel.add(Box.createRigidArea(new Dimension(0, 10)));
             }
         }
 
-        panelEquipos.revalidate(); // Actualizar el panel de equipos
-        panelEquipos.repaint(); // Redibujar el panel de equipos
+        // Crear y añadir el JScrollPane
+        JScrollPane scrollPane = new JScrollPane(buttonPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setBorder(null);
+        
+        // Añadir el scrollPane al panel principal
+        panelEquipos.add(scrollPane, BorderLayout.CENTER);
 
-        // Cambiar a la vista de equipos
+        // Actualizar el panel
+        panelEquipos.revalidate();
+        panelEquipos.repaint();
+
+        // Mostrar el panel de equipos
         CardLayout cl = (CardLayout) getContentPane().getLayout();
         cl.show(getContentPane(), "Equipos");
     }
 
-    // Método para cargar equipos desde un archivo
     private ArrayList<String> cargarEquipos(String liga) {
         ArrayList<String> equipos = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("resources/data/equipos_ligas.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(", ");
-                if (parts.length == 2 && parts[1].equalsIgnoreCase(liga)) {
-                    equipos.add(parts[0]); // Agregar el nombre del equipo
+        String rutaArchivo = "resources/data/equipos_ligas.txt";
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] parts = linea.split(",");
+                if (parts.length >= 2) {
+                    String nombreEquipo = parts[0].trim();
+                    String ligaEquipo = parts[1].trim();
+                    
+                    if (ligaEquipo.equalsIgnoreCase(liga)) {
+                        equipos.add(nombreEquipo);
+                    }
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, 
+                "Error al cargar los equipos: " + e.getMessage(), 
+                "Error", 
+                JOptionPane.ERROR_MESSAGE);
         }
         return equipos;
     }

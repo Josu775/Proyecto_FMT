@@ -5,7 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class OpcionesPantalla extends JFrame {
-    private JCheckBox pantallaCompletaCheckbox;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JCheckBox pantallaCompletaCheckbox;
     private JComboBox<String> resolucionesComboBox;
     private VentanaMenuPrincipal ventanaPrincipal;
 
