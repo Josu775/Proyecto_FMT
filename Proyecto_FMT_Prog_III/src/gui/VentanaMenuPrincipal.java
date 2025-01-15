@@ -2,15 +2,17 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class VentanaMenuPrincipal extends JFrame {
-    private boolean pantallaCompleta = false;  // Estado de pantalla completa
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private boolean pantallaCompleta = false;  // Estado de pantalla completa
     private GraphicsDevice dispositivo;
 
     // Paneles

@@ -36,8 +36,6 @@ public class Main {
         JButton crearEquipoButton = new JButton("Crear Equipo");
         JButton jugarPartidoButton = new JButton("Jugar Partido");
         
-        // Panel para mostrar jugadores
-        JPanel jugadoresPanel = new JPanel(new BorderLayout());
         jugadoresArea = new JTextArea();
         jugadoresArea.setEditable(false);
         JScrollPane scrollJugadores = new JScrollPane(jugadoresArea);
